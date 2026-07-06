@@ -1,0 +1,25 @@
+[general]
+name=Extent To Layer
+qgisMinimumVersion=3.42
+qgisMaximumVersion=4.99
+description=Link a print-layout map's extent to the extent of a project layer, with an adjustable percentage buffer. The link is live (updates when the source layer changes), can be toggled on/off per map item, and is stored natively in the project via data-defined properties.
+about=Adds a small dock to the Print Layout designer. Pick any vector or raster layer in your project and link the selected map item's extent to that layer's extent. A buffer field lets you grow or shrink the linked extent by a percentage (100%% = exact extent). When enabled the four extent bounds become data-defined expressions, so the link keeps working even without this plugin installed. Turning it off freezes the map at its current view and returns it to manual control. For vector layers, the layout preview is refreshed automatically when you finish an edit session (commit). Licensed under GPL-2.0-or-later.
+version=0.1.2
+author=REUVEN KOST
+email=reuvenkost@gmail.com
+
+homepage=https://github.com/reuvenAdalya/qgis-plugin-extent-to-layer
+repository=https://github.com/reuvenAdalya/qgis-plugin-extent-to-layer
+tracker=https://github.com/reuvenAdalya/qgis-plugin-extent-to-layer/issues
+
+experimental=False
+deprecated=False
+supportsQt6=True
+hasProcessingProvider=no
+tags=layout,print layout,extent,map,data defined,crs,buffer
+icon=icon.svg
+category=Plugins
+
+changelog=0.1.2 - Remember dock open/closed state across designers (QgsSettings).
+    0.1.1 - Fix: disabling a link no longer resizes the map item (uses zoomToExtent).
+    0.1.0 - Initial release: link map extent to a vector/raster layer with buffer, CRS transform, and per-item toggle.
