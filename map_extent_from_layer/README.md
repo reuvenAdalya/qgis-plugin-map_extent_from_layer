@@ -1,4 +1,4 @@
-# Extent To Layer
+# Map Extent From Layer
 
 A QGIS Print Layout plugin that links a layout map item's **extent** to the
 extent of a project layer, with an adjustable percentage buffer. The link is
@@ -27,7 +27,7 @@ clearing those expressions.
 ## Usage
 
 1. Open a Print Layout and select (or add) a map item.
-2. Click the **Extent To Layer** button in the layout toolbar to show the panel.
+2. Click the **Map Extent From Layer** button in the layout toolbar to show the panel.
 3. Tick **Link extent to layer**, choose a source layer, and set a buffer.
 4. The map extent now follows that layer. It re-evaluates on refresh/export, and
    (for vector layers) after each commit.

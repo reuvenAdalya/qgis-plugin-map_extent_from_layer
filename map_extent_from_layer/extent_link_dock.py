@@ -34,15 +34,15 @@ from qgis.gui import QgsMapLayerComboBox
 from .compat import extent_dd_keys, layer_filters, right_dock_area
 from . import extent_expressions as xe
 
-CONFIG_KEY = "extent_to_layer"
+CONFIG_KEY = "map_extent_from_layer"
 # Global preference (applies to every layout designer) for whether the dock
 # should open automatically.
-VISIBILITY_KEY = "extent_to_layer/dock_visible"
+VISIBILITY_KEY = "map_extent_from_layer/dock_visible"
 
 
 class ExtentLinkDock(QDockWidget):
     def __init__(self, designer, iface):
-        super().__init__("Extent To Layer")
+        super().__init__("Map Extent From Layer")
         self.designer = designer
         self.iface = iface
         self._current_map = None
@@ -66,7 +66,7 @@ class ExtentLinkDock(QDockWidget):
             toolbar = None
         if toolbar is not None:
             from qgis.PyQt.QtWidgets import QAction
-            self._action = QAction(icon, "Extent To Layer", self.designer.window())
+            self._action = QAction(icon, "Map Extent From Layer", self.designer.window())
             self._action.setCheckable(True)
             self._action.setToolTip("Link the selected map item's extent to a layer")
             self._action.toggled.connect(self.setVisible)
@@ -129,7 +129,7 @@ class ExtentLinkDock(QDockWidget):
 
         form = QFormLayout()
 
-        self.enable_cb = QCheckBox("Link extent to layer")
+        self.enable_cb = QCheckBox("Link map extent to layer")
         self.enable_cb.toggled.connect(self._on_enable_toggled)
         form.addRow(self.enable_cb)
 
@@ -410,9 +410,9 @@ class ExtentLinkDock(QDockWidget):
         try:
             bar = self.designer.messageBar()
             if warn:
-                bar.pushWarning("Extent To Layer", text)
+                bar.pushWarning("Map Extent From Layer", text)
             else:
-                bar.pushInfo("Extent To Layer", text)
+                bar.pushInfo("Map Extent From Layer", text)
         except Exception:
             pass
 

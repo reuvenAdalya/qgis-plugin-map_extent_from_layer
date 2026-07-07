@@ -40,7 +40,7 @@ class ExtentLinkerPlugin:
         except Exception as exc:  # never let a UI error block the designer
             try:
                 designer.messageBar().pushWarning(
-                    "Extent To Layer", "Could not initialise: {0}".format(exc)
+                    "Map Extent From Layer", "Could not initialise: {0}".format(exc)
                 )
             except Exception:
                 pass
