@@ -1,9 +1,27 @@
 # Map Extent From Layer
 
-A QGIS Print Layout plugin that links a layout map item's **extent** to the
-extent of a project layer, with an adjustable percentage buffer. The link is
-**live**, **toggleable**, and stored **natively** in the project.
+A QGIS Layout plugin that links automatically an **extent** of a project layer to layout map item's, with an adjustable percentage buffer.
+ 
+## Usage
 
+1. Open a Print Layout and select (or add) a map item.
+
+2. Click the **Map Extent From Layer** button in the layout toolbar to show the panel.
+
+3. Tick **Link extent to layer**, choose a source layer.
+
+4. The map extent now follows that layer. It re-evaluates on refresh/export, and
+   (for vector layers) after each commit.
+
+5. OPTIONAL: change buffer around the layer original extent. less then 100% for larger scale map  or above 100% from smaller scale.
+
+6. Untick to freeze and return to manual extent control, using other method if needed.
+
+
+Keep in mind that the map extent may change as the layer source extent change while it toggled on.
+
+
+The link is **live**, **toggleable**, and stored **natively** in the project.
 Because the link is implemented with the map item's data-defined extent
 properties, it keeps working even for people who open the project without this
 plugin installed — the plugin is simply a convenient UI for setting and
@@ -23,15 +41,6 @@ clearing those expressions.
   finish an edit session (commit).
 - A dockable panel in the Layout Designer whose open/closed state is remembered
   across designers.
-
-## Usage
-
-1. Open a Print Layout and select (or add) a map item.
-2. Click the **Map Extent From Layer** button in the layout toolbar to show the panel.
-3. Tick **Link extent to layer**, choose a source layer, and set a buffer.
-4. The map extent now follows that layer. It re-evaluates on refresh/export, and
-   (for vector layers) after each commit.
-5. Untick to freeze and return to manual extent control.
 
 ## How it works
 
