@@ -8,13 +8,12 @@ version=0.1.2
 author=REUVEN KOST
 email=reuvenkost@gmail.com
 
-homepage=https://github.com/reuvenAdalya/qgis-extent-to-layer
-repository=https://github.com/reuvenAdalya/qgis-extent-to-layer
-tracker=https://github.com/reuvenAdalya/qgis-extent-to-layer/issues
+homepage=https://github.com/reuvenAdalya/qgis-plugin-map_extent_from_layer
+repository=https://github.com/reuvenAdalya/qgis-plugin-map_extent_from_layer
+tracker=https://github.com/reuvenAdalya/qgis-plugin-map_extent_from_layer/issues
 
 experimental=False
 deprecated=False
-supportsQt6=True
 hasProcessingProvider=no
 tags=layout,print layout,extent,map,data defined,crs,buffer
 icon=icon.svg
